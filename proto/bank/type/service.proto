@@ -1,0 +1,11 @@
+syntax = "proto3";
+
+package bank;
+
+import "grpc0/proto/bank/type/account.proto";
+
+option go_package = "github.com/archi-chester/grpc0/protogen/go/bank";
+
+service BankService {
+  rpc GetCurrentBalance(CurrentBalanceRequest) returns (CurrentBalanceResponse);
+}
